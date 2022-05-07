@@ -65,17 +65,6 @@
         "controlled"
       ],
       "correctIndex": 1
-    },
-    {
-      "prompt": "What is JSX",
-      "answers": [
-        "a word",
-        "initials",
-        "javascript and xml",
-        "I don't know"
-      ],
-      "correctIndex": 2,
-      "id": 7
     }
   ]
 }

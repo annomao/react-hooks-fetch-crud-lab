@@ -12,8 +12,17 @@ function QuestionList() {
     })
   },[])
 
+  function handleDeleteQuestion(deletedQuestion){
+    const updatedQuestions = questions.filter((question) => question.id !== deletedQuestion.id);
+    setQuestions(updatedQuestions);
+  }
+
   const questionLi = questions.map((question)=>{
-    return <QuestionItem key={question.id} question={question} />
+    return <QuestionItem 
+    key={question.id} 
+    question={question}
+    onDeleteQuestion={handleDeleteQuestion}
+     />
   })
 
   return (
