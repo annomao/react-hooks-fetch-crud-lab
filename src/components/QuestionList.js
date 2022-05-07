@@ -17,11 +17,23 @@ function QuestionList() {
     setQuestions(updatedQuestions);
   }
 
+  function handleUpdateQuestion(updatedAnswer){
+    const updatedQuestions = questions.map((question)=>{
+      if(question.id === updatedAnswer.id){
+        return updatedAnswer
+      }else{
+        return question
+      }
+    });
+    setQuestions(updatedQuestions);
+  }
+
   const questionLi = questions.map((question)=>{
     return <QuestionItem 
     key={question.id} 
     question={question}
     onDeleteQuestion={handleDeleteQuestion}
+    onUpdateQuestion={handleUpdateQuestion}
      />
   })
 
